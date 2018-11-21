@@ -4,14 +4,23 @@ import router from './router'
 //引入vue-resource
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
+Vue.http.options.root = 'http://www.lovegf.cn:8899/'
+
+//定义全局时间过滤器 
+import moment from 'moment'
+Vue.filter('dateFormat',function(dateStr,pattern = "YYYY-MM-DD HH:mm:ss"){
+  return moment(dateStr).format(pattern)
+})
+
 
 Vue.config.productionTip = false
 
 //按需引入mint-ui
-import { Header , Swipe, SwipeItem} from 'mint-ui'
+import { Header , Swipe, SwipeItem, Button} from 'mint-ui'
 Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
+Vue.component(Button.name, Button)
 //引入mui
 import './lib/mui/css/mui.css'
 import './lib/mui/css/icons-extra.css'
