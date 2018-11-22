@@ -4,7 +4,10 @@ import router from './router'
 //引入vue-resource
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
+//配置请求根路径
 Vue.http.options.root = 'http://www.lovegf.cn:8899/'
+//配置post请求头
+Vue.http.options.emulateJSON = true
 
 //定义全局时间过滤器 
 import moment from 'moment'
