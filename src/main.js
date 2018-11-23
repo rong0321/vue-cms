@@ -15,6 +15,20 @@ Vue.filter('dateFormat',function(dateStr,pattern = "YYYY-MM-DD HH:mm:ss"){
   return moment(dateStr).format(pattern)
 })
 
+//引入懒加载组件
+import VueLazyload from 'vue-lazyload'
+
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  error: require('./assets/images/error.jpg'),
+  loading: require('./assets/images/loading.gif'),
+  attempt: 1
+})
+
+//图片预览组件
+import VuePreview from 'vue2-preview'
+Vue.use(VuePreview)
+
 
 Vue.config.productionTip = false
 

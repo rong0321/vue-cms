@@ -74,6 +74,10 @@ export default {
     p {
       margin-bottom: 10px;
     }
+    img{
+      width: 100%;
+      display: block;
+    }
   }
 }
 </style>
