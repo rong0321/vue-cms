@@ -143,7 +143,7 @@ export default {
         
         // console.log(offsetLeft,offsetTop)
         el.style.transform = `translate(${offsetLeft}px,${offsetTop}px)`
-        el.style.transition = 'all .5s cubic-bezier(.26,-0.52,1,.68)'
+        el.style.transition = 'all .5s cubic-bezier(.26,-0.52,1,.85)'
         done()
     },
     afterEnter(el){
